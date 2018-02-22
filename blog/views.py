@@ -7,7 +7,7 @@ from django.views import View
 
 
 
-from Our_site import settings
+from sfedu import settings
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 

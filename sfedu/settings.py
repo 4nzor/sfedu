@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 PROJECT_PATH= "C:/Users/zorkg/Downloads/Project/Backend"
-SETTINGS_DIRS = (os.path.join(PROJECT_PATH, 'Our_site/settings.py'),)
+SETTINGS_DIRS = (os.path.join(PROJECT_PATH, 'sfedu/settings.py'),)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -56,7 +56,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Our_site.urls'
+ROOT_URLCONF = 'sfedu.urls'
 
 TEMPLATES = [
     {
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Our_site.wsgi.application'
+WSGI_APPLICATION = 'sfedu.wsgi.application'
 
 
 # Database
