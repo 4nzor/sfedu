@@ -1,0 +1,181 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .footer .viktor {
+        padding: 0 82px;
+    }
+
+    .headhesive .logotype_vspl img {
+        height: 35px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .headhesive {
+        display: none;
+    }
+
+    .main_menu ul {
+        display: none;
+    }
+
+    .search_header {
+        display: none;
+    }
+
+    .main_menu ul {
+        display: none;
+        margin-top: 10px;
+        background: #ffffff;
+    }
+
+    .main_menu ul li {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    .main_menu ul li a {
+        border-bottom: 1px solid rgba(175, 168, 246, 0.1);
+    }
+
+    .main_menu li {
+        display: block;
+    }
+
+    .main_menu a {
+        padding: 10px 20px;
+        color: #828282;
+    }
+
+    .main_menu a:hover {
+        background: #E7E7E7;
+    }
+
+    .main_menu .sub_menu {
+        position: relative;
+        float: left;
+        width: 100%;
+        display: block !important;
+        box-shadow: none;
+        background: none;
+        margin-top: 0;
+        padding-left: 30px;
+    }
+
+    .main_menu .sub_menu li {
+        width: 100%;
+        border: 0;
+        padding: 0;
+    }
+
+    .main_menu .sub_menu li a {
+        color: #828282;
+    }
+
+    .footer .mikhael img {
+        height: 100px;
+    }
+
+    .footer .viktor {
+        padding: 0 75px;
+    }
+
+    .footer .viktor img {
+        height: 100px;
+    }
+
+    .footer .anzor img {
+        height: 100px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .header_topline {
+        display: none;
+    }
+
+    .vk_prog {
+        display: none;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    .headhesive .logotype_vspl img {
+        padding-top: 15px;
+        height: 31px;
+    }
+
+    .logotype img {
+        height: 38px;
+    }
+
+    .logotype {
+        padding-top: 5px;
+    }
+
+    .box_timeta{
+    padding: 20px;
+    }
+
+    .box_timeta h2 {
+        font-size: 16pt;
+        color: #525252;
+    }
+
+    .group {
+        padding: 5px;
+        background: #6B2541;
+        font-size: 16pt;
+        color: #ffffff;
+        width: 150px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+    .header_button {
+        display: none;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+}

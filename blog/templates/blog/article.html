@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends 'blog/base.html' %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}{{ article.title }}{% endblock %}
+
+</head>
+
+{% block content %}
+    <body>
+    <div class="col-lg-12 col-md-12">
+        <div class="row">
+            <div class="box_article">
+                <h2 class="post_title_article">{{ article.title }}</h2>
+
+                {% if article.image %}
+
+                    <a href="#"><img class="minimg" src="{{ article.image.url }}" alt="#" width="1200" height="800"></a>
+
+                {% endif %}
+
+            <p class="my_content_article">{{ article.text }}</p>
+            <div class="keklol">
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    </body>
+
+{% endblock %}
+<hr>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% extends 'blog/base.html' %}
+
+<hr lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}Расписание{% endblock %}
+
+</head>
+
+{% block content %}
+    {% for table in tables %}
+        <div class="col-lg-12 col-md-12">
+            <div class="row">
+                <div class="box_timeta">
+                    <div class="title_timeta">
+                        <ul class="timeta_ul">
+                            <li><h2>Рассписание занятий для:</h2></li>
+                            <li>
+                                <div class="group">{{ table.name }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="{{ table.image.url }}" class="table_scr" alt="Расписание {{ table.name }}">
+                    <div class="down_timeta">
+                        <ul class="timeta_ul">
+                            <li><p>Скачать:</p></li>
+                            <li><a download href="{{ table.image.url }}" class="link_timeta">Расписание {{ table.name }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

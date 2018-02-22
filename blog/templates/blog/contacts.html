@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load bootstrap3 %}
+{% block title %}Контакты{% endblock %}
+{% block content %}
+
+    <div class="col-lg-12 col-md-12">
+        <div class="row">
+            <div class="box_contacts">
+                <div class="contact_form">
+                    <div class="inform_con">
+
+                    </div>
+                    {% if contact_form %}
+                        <p class="caption_cf">Спасибо, что посетили наш сайт!</p>
+                        <p class="text_con">Если у Вас есть пожелания или предложения по улучшению сайта или Вы желаете задать вопрос,
+                            то Вы можете сделать это, воспользовавшись контактной формой:</p>
+                        <form class="" id="contact_form" action="{% url 'contacts' %}" method="post">
+                            {% csrf_token %}
+                            <label>
+                                <p class="subtitle_cf">Ф.И.О :
+                                <input type="text" class="text_cf" name="name" value="{{ name }}"></p>
+                                <p class="subtitle_cf">Ваш e-mail :
+                                <input type="email" class="text_cf" name="email"  value="{{ email }}"></p>
+                                <p class="subtitle_cf">Сообщение :
+                                <input class="text_cf" id="message" type="text" name="message" value="{{ message }}"></p><br>
+
+                                <input type="reset" class="con_button" value="Очистить">
+                                <input type="submit" class="con_button" value="Отправить">
+
+                            </label>
+                        </form>
+                    {% else %}
+                        <p class="caption_cf">Сообщение отправлено!</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,233 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../../static/libs/bootstrap/bootstrap-grid-3.3.1.min.css"/>
+    <link rel="stylesheet" href="../../static/libs/font-awesome-4.2.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../static/libs/fancybox/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="../../static/libs/owl-carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="../../static/libs/countdown/jquery.countdown.css"/>
+    <link rel="stylesheet" href="../../static/blog/fonts.css"/>
+    <link rel="stylesheet" href="../../static/blog/main.css"/>
+    <link rel="stylesheet" href="../../static/blog/media.css"/>
+    <link rel="stylesheet" href="../../static/libs/mobilemenu/jquery.mmenu.css"/>
+    <link rel="stylesheet" href="../../static/libs/superfish/megafish.css"/>
+    <link rel="stylesheet" href="../../static/libs/superfish/superfish.css"/>
+    <link rel="stylesheet" href="../../static/libs/hamburger/hamburgers.css"/>
+</head>
+<body>
+
+    <div class="wapper_our">
+
+        <header class="top_header">
+            <div class="header_topline">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="soc_button">
+                                <a href="http://sfedu.ru/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
+                                    SFEDU</a>
+                                <a href="http://ictis.sfedu.ru/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
+                                    ICTIS</a>
+                                <a href="http://iasb.ictis.sfedu.ru/" target="_blank"><i class="fa fa-link"
+                                                                                         aria-hidden="true"></i> IASB</a>
+                            </div>
+                            <div class="vk_button">
+                                <a href="https://vk.com/ictis_sfedu" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                    ICTIS</a>
+                            </div>
+                            <div class="contacts_head">
+                                <a href="http://sfedu.ru/pls/rsu/docs/dir/SPEC_DOCS15_DIR/Ant_29_2015.pdf?6871.pdf|application/pdf"
+                                   target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> 10.03.01</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_head">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="header_button">
+                                <button id="mmenu-icon" class="hamburger hamburger--emphatic" type="button">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="logotype">
+                                <a href="{% url 'home' %}"><img src="../../static/images/Logo_menu.png" alt="Logo"></a>
+                            </div>
+                            <div class="logotype_vspl">
+                                <a href="{% url 'home' %}"><img src="../../static/images/Logo_menu_vspl.png" alt="Logo_vspl"></a>
+                            </div>
+                            <div class="main_menu">
+                                <ul>
+                                    <div class="search-mobile hidden-lg hidden-md">
+                                        <form class="search-mobile_form">
+                                            <input type="text" placeholder="Искать здесь...">
+                                            <button class="button_search_mobile" type="submit" ><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                        </form>
+                                    </div>
+                                    <li class="active"><a href="{% url 'home' %}">Главная</a></li>
+                                    <li><a href="{% url 'information' %}">Информация</a>
+                                        <ul class="sub_menu">
+                                            <li><a href="{% url 'faculty' %}">Професcорский состав</a></li>
+                                            <li><a href="{% url 'schedule' %}">Расписание</a></li>
+                                            <li><a href="{% url 'documentation' %}">Документация</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'library' %}">Библиотека</a>
+                                        <ul class="sub_menu">
+                                            <li><a href="{% url 'libraries' 'matematika' %}">Математика</a></li>
+                                            <li><a href="{% url 'libraries' 'descr_math' %}">Дискретная математика</a></li>
+                                            <li><a href="{% url 'libraries' 'informanic' %}">Информатика</a></li>
+                                            <li><a href="{% url 'libraries' 'oaip' %}">ОАиП</a></li>
+
+                                            <li><a href="{% url 'libraries' 'oop' %}">ООП</a></li>
+                                            <li><a href="{% url 'libraries' 'mathlogika' %}">Алгебра логики</a></li>
+                                            <li><a href="{% url 'libraries' 'physics' %}">Физика</a></li>
+                                            <li><a href="{% url 'libraries' 'psycho' %}">Психология</a></li>
+
+                                            <li><a href="{% url 'libraries' 'os' %}">Операционные системы</a></li>
+                                            <li><a href="{% url 'libraries' 'electronic' %}">Электроника и электротехника</a></li>
+                                            <li><a href="{% url 'libraries' 'economic' %}">Экономика</a></li>
+                                            <li><a href="{% url 'libraries' 'bazi_dannih' %}">Базы данных</a></li>
+
+                                        </ul>
+                                        <ul class="sub_menu">
+
+                                            <li><a href="{% url 'libraries' 'comp_graph' %}">Компьютерная графика</a></li>
+                                            <li><a href="{% url 'libraries' 'progr_ingin' %}">Программная инженерия</a></li>
+                                            <li><a href="{% url 'libraries' 'progr_management' %}">Программный менеджмент</a></li>
+                                            <li><a href="{% url 'libraries' 'optimisation' %}">Методы оптимизации</a></li>
+
+                                            <li><a href="{% url 'libraries' 'tech_eco_project' %}">Технико-экономическое проектирование</a></li>
+                                            <li><a href="{% url 'libraries' 'corp_po' %}">Корпоративное ПО</a></li>
+                                            <li><a href="{% url 'libraries' 'bezopasn_inf_tech' %}">Безопасность информационных технологий</a></li>
+                                            <li><a href="{% url 'libraries' 'metrology' %}">Метрология и качество программного обеспечения</a></li>
+
+                                            <li><a href="{% url 'libraries' 'pedagogic' %}">Педагогика и МО</a></li>
+                                            <li><a href="{% url 'libraries' 'realtime_systems' %}">Системы реального времени</a></li>
+                                            <li><a href="{% url 'libraries' 'method_progr' %}">Методология программирования</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contacts' %}">Контакты</a></li>
+                                    <li><a href="{% url 'about' %}">О нас</a></li>
+                                </ul>
+                                <div class="search_header">
+                                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="close_search hidden-sm hidden-xs"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div class="opacity hidden-sm hidden-xs"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search_popup hidden-sm hidden-xs">
+                          <form action="{% url 'search:index' %}" class="search_vspl" method="get">
+                            <input id="search" name="q" type="text" placeholder="Поиск..." class="input_vspl" />
+                            <button type="submit" class="searchsubmit"><i class="fa fa-search"></i></button>
+                         </form>
+                       </div>
+                   </div>
+               </div>
+            </div>
+
+        <div class="main_content">
+            <div class="container">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="inf_foot">
+                            Сайт создан компанией студентов ИКТИБа: &copy; RBM при поддержке велосипедов и костылей!
+                        </div>
+                        <div class="vk_prog">
+                            <div class="col-xs-4">
+                                <div class="row">
+                                    <div class="mikhael">
+                                        <a href="https://vk.com/apxutupah" target="_blank"><img src="../../static/images/des_mi.png" alt="Des_mi"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="row">
+                                    <div class="viktor">
+                                        <a href="https://vk.com/vibelin" target="_blank"><img src="../../static/images/verst_vi.png" alt="Verst_vi"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="row">
+                                    <div class="anzor">
+                                        <a href="https://vk.com/kgb_zor" target="_blank"><img src="../../static/images/prog_an.png" alt="Prog_an"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="up_button">
+        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </div>
+
+    </div>
+
+    <!--[if lt IE 9]>
+        <script src="../../static/libs/html5shiv/es5-shim.min.js"></script>
+        <script src="../../static/libs/html5shiv/html5shiv.min.js"></script>
+        <script src="../../static/libs/html5shiv/html5shiv-printshiv.min.js"></script>
+        <script src="../../static/libs/respond/respond.min.js"></script>
+        <![endif]-->
+    <script src="../../static/libs/jquery/jquery-1.11.1.min.js"></script>
+    <script src="../../static/libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    <script src="../../static/libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="../../static/libs/waypoints/waypoints-1.6.2.min.js"></script>
+    <script src="../../static/libs/scrollto/jquery.scrollTo.min.js"></script>
+    <script src="../../static/libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../../static/libs/countdown/jquery.plugin.js"></script>
+    <script src="../../static/libs/countdown/jquery.countdown.min.js"></script>
+    <script src="../../static/libs/countdown/jquery.countdown-ru.js"></script>
+    <script src="../../static/libs/landing-nav/navigation.js"></script>
+    <script src="../../static/libs/mobilemenu/jquery.mmenu.all.js"></script>
+    <script src="../../static/libs/superfish/superfish.min.js"></script>
+    <script src="../../static/libs/headhesive/headhesive.min.js"></script>
+    <script src="../../static/js/common.js"></script>
+</body>
+</html>

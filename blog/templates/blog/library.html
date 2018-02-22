@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+{% extends 'blog/base.html' %}
+{% load bootstrap3 %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}Информационная безопасность{% endblock %}
+
+</head>
+<body>
+{% block content %}
+    <body>
+    <div class="col-lg-12 col-md-12">
+        <div class="row">
+            <div class="links_bloks_lib">
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_math">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'matematika' %}"><img
+                                                src="../../static/images/subjects/Math.png" alt="Математика"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'matematika' %}">Математика</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_descr">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'descr_math' %}"><img
+                                                src="../../static/images/subjects/Diskretnaya_math.png"
+                                                alt="Дискретная математика"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'descr_math' %}">Дискретная математика</a>
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_inf">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'informanic' %}"><img
+                                                src="../../static/images/subjects/Informatica.png"
+                                                alt="Информатика"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'informanic' %}">Информатика</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_oaip">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'oaip' %}"><img
+                                                src="../../static/images/subjects/OAiP.png"
+                                                alt="ОАиП"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'oaip' %}">ОАиП</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="links_bloks_lib">
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_oop">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'oop' %}"><img
+                                                src="../../static/images/subjects/OOP.png"
+                                                alt="ООП"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'oop' %}">ООП</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_mathlog">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'mathlogika' %}"><img
+                                                src="../../static/images/subjects/Algebra_logiki.png"
+                                                alt="Алгебра логики"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'mathlogika' %}">Алгебра логики</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_phys">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'physics' %}"><img
+                                                src="../../static/images/subjects/Physics.png" alt="Физика"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'physics' %}">Физика</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_psyho">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'psycho' %}"><img
+                                                src="../../static/images/subjects/Psycho.png"
+                                                alt="Психология"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'psycho' %}">Психология</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="links_bloks_lib">
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_os">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'os' %}"><img
+                                                src="../../static/images/subjects/OS.png"
+                                                alt="Операционные ситемы"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'os' %}">Операционные ситемы</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_eltr">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'electronic' %}"><img
+                                                src="../../static/images/subjects/Electronic.png"
+                                                alt="Электротехника"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'electronic' %}">Электротехника</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_econ">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'economic' %}"><img
+                                                src="../../static/images/subjects/Economic.png" alt="Экономика"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'economic' %}">Экономика</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_bada">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'bazi_dannih' %}"><img
+                                                src="../../static/images/subjects/Bazi_dannih.png"
+                                                alt="Базы данных"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'bazi_dannih' %}">Базы данных</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="links_bloks_lib">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_comgrf">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'comp_graph' %}"><img
+                                                src="../../static/images/subjects/Comp_graphic.png"
+                                                alt="Компьютерная графика"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'comp_graph' %}">Компьютерная графика</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_pring">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'progr_ingin' %}"><img
+                                                src="../../static/images/subjects/Programm_ingineering.png"
+                                                alt="Программная инженерия"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'progr_ingin' %}">Программная инженерия</a>
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_prmeng">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'progr_management' %}"><img
+                                                src="../../static/images/subjects/Programm_management.png"
+                                                alt="Программный менеджмент"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'progr_management' %}">Программный
+                                                менеджмент</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_optim">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'optimisation' %}"><img
+                                                src="../../static/images/subjects/Optimisation_methods.png"
+                                                alt="Методы оптимизации"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'optimisation' %}">Методы оптимизации</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="links_bloks_lib">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_tep">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'tech_eco_project' %}"><img
+                                                src="../../static/images/subjects/Tech_eco_project.png"
+                                                alt="ТЭП"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'tech_eco_project' %}">ТЭП</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_corppo">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'corp_po' %}"><img
+                                                src="../../static/images/subjects/Corporation_PO.png"
+                                                alt="Корпоративное ПО"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'corp_po' %}">Корпоративное ПО</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_bitech">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'bezopasn_inf_tech' %}"><img
+                                                src="../../static/images/subjects/Bezopasnost_inf_technologiy.png"
+                                                alt="БИТ"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'bezopasn_inf_tech' %}">БИТ</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_metikpo">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'metrology' %}"><img
+                                                src="../../static/images/subjects/Metrology.png"
+                                                alt="Метрология и КПО"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'metrology' %}">Метрология и КПО</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="links_bloks_lib">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_pedag">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'pedagogic' %}"><img
+                                                src="../../static/images/subjects/Pedagogyc_i_MO.png"
+                                                alt="Педагогика и МО"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'pedagogic' %}">Педагогика и МО</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_timsys">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'realtime_systems' %}"><img
+                                                src="../../static/images/subjects/Realtime_systems.png"
+                                                alt="Системы РВ"/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'realtime_systems' %}">Системы РВ</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib_bot">
+                            <div class="lib_metprog">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+                                        <a href="{% url 'libraries' 'method_progr' %}"><img
+                                                src="../../static/images/subjects/Methodology_programm.png"
+                                                alt="Методология прог."/></a>
+                                        <figcaption>
+                                            <p><a href="{% url 'libraries' 'method_progr' %}">Методология прог.</a></p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="box_lib">
+                            <div class="lib_phy">
+                                <div class="grid">
+                                    <figure class="effect-lib">
+
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+{% endblock %}
+</body>
+</html>

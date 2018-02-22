@@ -1,0 +1,156 @@
+{% extends 'blog/base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+     {% if tag_list %}
+    <h1>Поиск</h1>
+    <p>Найдено по тегу  {{ tag }} : {{ len_article }}</p>
+    <hr>
+    <p></p>
+
+        {% for tag in tag_list %}
+            <div class="box_blog">
+            <div class="blog_content">
+                <p>{{ tag.category}}</p>
+                <a href="{{ tag.url}}">
+                    <h2 class="post_title">{{ tag.title }}</h2>
+
+                </a>
+                <p class="my_content">{{ tag.text }}</p>
+                <hr>
+                {{ tag.desctription|safe }}
+                <div class="read_more"> <p><a class="btn btn-default btn-sm" href="{{ tag.get_absolute_url}}">Читать далее</a></p></div>
+            </div>
+            </div>
+        {% endfor %}
+        <div class="paginator_home">
+
+        </div >
+        <hr>
+
+    {% endif %}
+
+
+
+
+
+
+
+     {% if tb_l %}
+    <h1>Поиск</h1>
+    <p>Найдено результатов {{ len_find}}</p>
+    <hr>
+     <p>Расписание</p>
+      {% for table in tb_l %}
+            <div class="box_blog">
+            <div class="blog_content">
+                <p></p>
+                <a href="{{ teacher.file.url }}">
+                    <h2 class="post_title">{{ table.name }}</h2>
+                </a>{{ teacher.desctription|safe }}
+                <hr>
+
+            </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{#####################################}
+{% if f_l %}
+    <p>Файлы</p>
+      {% for teacher in f_l %}
+            <div class="box_blog">
+            <div class="blog_content">
+                <p></p>
+                <a href="{{ teacher.file.url }}">
+                    <h2 class="post_title">{{ teacher.title }}</h2>
+
+                </a>
+                <p class="my_content">{{ teacher.about }}</p>
+                <hr>
+                {{ teacher.desctription|safe }}
+{#                <div class="read_more"> <p><a class="btn btn-default btn-sm" href="{%  url 'teachers' teacher.id%}">Читать далее</a></p></div>#}
+            </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+{#    #######################################}
+    {% if d_l %}
+    <p>Документация</p>
+      {% for doc in d_l %}
+            <div class="box_blog">
+            <div class="blog_content">
+                <p></p>
+                <a href="{{ doc.file.url }}">
+                    <h2 class="post_title">{{ doc.title }}</h2>
+
+                </a>
+{#                <p class="my_content">{{ teacher.about }}</p>#}
+                <hr>
+                {{ doc.desctription|safe }}
+{#                <div class="read_more"> <p><a class="btn btn-default btn-sm" href="{%  url 'teachers' teacher.id%}">Читать далее</a></p></div>#}
+            </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{#    ###################################}
+ {% if t_l %}
+            <p>Преподаватели</p>
+         {% for teacher in t_l %}
+
+            <div class="box_blog">
+            <div class="blog_content">
+                <a href="{% url 'information'  %}">
+                    <img class="image_search" src="{{ teacher.image.url }}">
+                    <h2 class="post_title">{{ teacher.name }}</h2>
+                </a>
+                <p class="my_content">{{ teacher.about }}</p>
+                <hr>
+                {{ teacher.desctription|safe }}
+{#                <div class="read_more"> <p><a class="btn btn-default btn-sm" href="{%  url 'teachers' teacher.id%}">Читать далее</a></p></div>#}
+            </div>
+            </div>
+        {% endfor %}
+     {% endif %}
+{#     ############################}
+{% if article_lists %}
+      <p>Статьи</p>
+        {% for article in article_lists %}
+
+            <div class="box_blog">
+            <div class="blog_content">
+
+                <a href="{{ article.url }}">
+                    <h2 class="post_title">{{ article.title }}</h2>
+
+                </a>
+                {% if article.short_text is not None %}
+                <p class="my_content">{{ article.short_text}}</p>
+                {% else %}
+                    <p class="my_content">{{ article.text}}</p>
+                {% endif %}
+                <hr>
+                {{ article.desctription|safe }}
+                <div class="read_more"> <p><a class="btn btn-default btn-sm" href="{{ article.get_absolute_url}}">Читать далее</a></p></div>
+            </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{#    #####################}
+    {% if message is  not None %}
+
+    <div class="box_article"> <div class="blog_content">
+        <h2 class="post_tile">{{ message }}</h2></div></div>
+
+<hr>
+
+   {% else %}
+         <div class="paginator_home">
+
+{#        {% bootstrap_pagination article_lists url=last_question %}#}
+
+        </div >
+        <hr>
+    {% endif %}
+{% endblock %}

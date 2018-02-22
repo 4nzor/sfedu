@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{% extends 'blog/base.html' %}
+{% load bootstrap3 %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}Информационная безопасность{% endblock %}
+
+</head>
+<body>
+{% block content %}
+
+
+    <div class="col-lg-2 col-md-2">
+        <div class="row">
+            <div class="sidebar">
+                <div class="sidebar_box">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10 col-md-10">
+        <div class="row">
+            <div class="blog_content">
+                {% for librarys in library %}
+                    <div class="box_blog">
+                        <h2 class="post_title"><a href="{{ librarys.file.url }}">{{ librarys.title }}</a>
+                        </h2>
+                        <div class="post_meta">
+                            <ul>
+                            </ul>
+                        </div>
+                        <p class="my_content">{{ librarys.about }}</p>
+                        <p class="my_content"><a download href="{{ librarys.file.url}}">Cкачать</a></p>
+                    </div><hr>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <hr>
+{% endblock %}
+</body>
+</html>

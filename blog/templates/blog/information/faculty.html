@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% extends 'blog/home.html' %}
+
+<hr lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}Профессорский состав{% endblock %}
+
+</head>
+
+{% block content %}
+    {% for teacher in teachers %}
+                <div class="box_teachers">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="row">
+                            <div class="teacher_photo">
+                                <img class="teach_pho" src="{{ teacher.image.url }}" alt="#Фото">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="row">
+                            <div class="teacher_info">
+                                <h2 class="teach_name">{{ teacher.name }}</h2>
+                                <p>Email:{{ teacher.email }}</p>
+                                <p>Рабочий тел.{{ teacher.work_number }}:</p>
+                                <p>Звание:{{ teacher.rank }}</p>
+                                <p>Степень:{{ teacher.power }}</p>
+                                <p>Адрес:{{ teacher.adress }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Персональная страница:<a href="{{ teacher.personal_account }}">Страница</a></p>
+                </div>
+    {% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+{% extends 'blog/base.html' %}
+{% load bootstrap3 %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}Информационная безопасность{% endblock %}
+
+</head>
+<body>
+{% block content %}
+
+
+
+    <div class="col-lg-2 col-md-2">
+        <div class="row">
+            <div class="sidebar">
+                <div class="sidebar_box">
+                    <h3>Категории :</h3>
+                    <ul>
+                        {% for categorys in category %}
+                         <li><a href="{% url 'news_list' categorys.slug %}">{{ categorys.title }}</a></li>
+                      {% endfor %}
+                      <li><a href="{% url 'schedule' %}">Расписание</a></li>
+                         </ul>
+                    <h3 class="last_notes">Последние записи :</h3>
+                    {% for article in article_add %}
+                      <ul>
+                     <li><a href="{%  url 'article' article.id%}">{{ article.title }}</a></li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10 col-md-10">
+        <div class="row">
+            <div class="blog_content">
+
+
+                {% for article in article_lists %}
+
+                    <div class="box_blog">
+
+                        <h2 class="post_title"><a href="{% url 'article' article.id %}">{{ article.title }}</a></h2>
+
+                        <div class="post_meta">
+                            <ul>
+                                <li>{{ article.date_create }}</li>
+                                <li><a href="">#{{ article.category }}</a></li>
+
+                            </ul>
+                        </div>
+                        {% if  article.image %}
+
+                        <a href="{% url 'article' article.id %}"><img class="minimg" src="{{ article.image.url }}" alt="#" width="1200" height="800"></a>
+
+                        {% endif %}
+                        {% if article.short_text is not None %}
+                        <p class="my_content">{{ article.short_text|linebreaks }}</p>
+                            {% else %}
+                             <p class="my_content">{{ article.text|linebreaks }}</p>
+                            {% endif %}
+                        <div class="read_more">
+                            <a href="{% url 'article' article.id %}">Далее</a>
+                        </div>
+
+                    </div><hr>
+
+                {% endfor %}
+
+            </div>
+        </div>
+     <div class="paginator_home">{% bootstrap_pagination article_lists url=image.url %}</div>
+    </div>
+
+
+
+{% endblock %}
+</body>
+</html>
